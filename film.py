@@ -41,7 +41,7 @@ def sizes(size):
 	return size
 def getb(f,episod):
 	x = get(f)
-	xx = open(f"Umar_Bin_Khatab_Episode_{episod}.mp4","wb")
+	xx = open(f"Umar_Bin_Khatab_Episode_{episod}.mp4","ab")
 	xx.write(x.content)
 	return x.content
 def gas(u,episode):
