@@ -33,9 +33,7 @@ class OkRuDl:
             r = get(self.url,headers={"User-agent":"Mozilla/5.0 (Linux; Android 9; Redmi Note 5A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Mobile Safari/537.36"})
             v = re.search(r'data\-video\=\"(.*?)\"',r.text).group(1)
             data = json.loads(html.unescape(v))
-            video_title = data["videoName"]
-            if "." in video_title:
-                video_title = video_title.replace(".","_")
+            video_title = data["videoName"].replace(".","_").replace("/","_")
             print(f"\nPreparing to download \033[92m{video_title}\033[0m")
             url = data["videoSrc"]
             v = get(url,headers={"User-agent":"Mozilla/5.0 (Linux; Android 9; Redmi Note 5A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Mobile Safari/537.36"})
@@ -64,7 +62,7 @@ if __name__=='__main__':
 \033[92mVideo Downloader \033[0m|\033[92m Karjok Pangesty\033[0m
                           
 """)
-    url = input("ok.ru video URL : ")
+    url = input("\033[92mok.ru video URL : \033[0m")
     urlz = re.search("http[s]\:\/\/[(m\.)]+ok\.ru",url)
     if urlz:
         ok = OkRuDl(url)
