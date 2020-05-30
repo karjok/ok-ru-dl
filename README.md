@@ -13,7 +13,7 @@ apt update -y;apt upgrade -y;apt install python;apt install git;</br>pip install
 <pre>
 cd ok-ru-dl
 python ok.py
-<pre>
+</pre>
 
 Copy URL video, jalankan program, lalu pastekan dan enter.
 Proses akan segera berjalan.
