@@ -20,4 +20,4 @@ Proses akan segera berjalan.
 
 # Laporkan Error
 Silahkan screenshot error yang terjadi,
-dan kirimkan ke <a href="https://t.me/om_karjok>Author</a>.
+lalu <a href="https://t.me/om_karjok">kirimkan ke Author</a>.
