@@ -62,10 +62,10 @@ if __name__=='__main__':
 \033[92mVideo Downloader \033[0m|\033[92m Karjok Pangesty\033[0m
                           
 """)
-    url = input("\033[92mok.ru video URL : \033[0m")
-    urlz = re.search("http[s]\:\/\/[(m\.)]+ok\.ru",url)
+    urlz = input("\033[92mok.ru video URL : \033[0m")
+#    urlz = re.search("http[s]\:\/\/[m\.]+ok\.ru",url)
     if urlz:
-        ok = OkRuDl(url)
+        ok = OkRuDl(urlz)
         ok.download
     else:
         print("Invalid URL !")
